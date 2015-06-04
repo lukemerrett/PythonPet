@@ -14,16 +14,27 @@ class Pet:
         pass
 
     def hatch(self):
+        """
+        Sets the birth date and total potential age of the pet
+        """
         self.birth_date = self.__todays_date()
 
         self.lifespan_in_seconds = random.randint(
             self.minimum_potential_lifespan_in_seconds,
             self.total_potential_lifespan_in_seconds)
 
-    def current_age(self):
+    def current_age_in_seconds(self):
+        """
+        Gets the current age of the pet in seconds
+        :return: The total age of the pet in seconds
+        """
         return (self.__todays_date() - self.birth_date).total_seconds()
 
     def current_age_string(self):
+        """
+        Gets the age of the pet in a human readable string
+        :return: A human readable form of the pets age
+        """
         current_age = relativedelta(self.__todays_date(), self.birth_date)
         return "Your pet is currently %d years %d months %d days %d hours %d minutes old" % (
             current_age.years,
