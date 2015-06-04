@@ -2,7 +2,7 @@ __author__ = 'Luke Merrett'
 
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from random import random
+from random import randint
 
 class Pet:
     minimum_potential_lifespan_in_seconds = 86400  # 1 day
@@ -19,7 +19,7 @@ class Pet:
         """
         self.birth_date = self.__todays_date()
 
-        self.lifespan_in_seconds = random.randint(
+        self.lifespan_in_seconds = randint(
             self.minimum_potential_lifespan_in_seconds,
             self.total_potential_lifespan_in_seconds)
 
