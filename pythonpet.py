@@ -8,7 +8,7 @@ if __name__ == '__main__':
     myPet = Pet()
     myPet.hatch()
 
-    print(myPet.current_age_string())
+    print(myPet.Age.current_age_string())
 
     pets_status = myPet.get_pets_status()
 
