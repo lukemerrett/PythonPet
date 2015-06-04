@@ -1,7 +1,7 @@
 __author__ = 'Luke Merrett'
 
-from PetObjects.petstatus import PetStatus
-from PetObjects.petage import PetAge
+from PetObjects.status import PetStatus
+from PetObjects.age import Age
 
 class Pet:
     Age = None
@@ -13,7 +13,7 @@ class Pet:
         """
         Sets the birth date and total potential age of the pet
         """
-        self.Age = PetAge()
+        self.Age = Age()
 
     def get_pets_status(self):
         """

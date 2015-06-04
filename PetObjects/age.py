@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from random import randint
 from dateutil.relativedelta import relativedelta
 
-class PetAge:
+class Age:
     __minimum_potential_lifespan_in_seconds = 86400  # 1 day
     __total_potential_lifespan_in_seconds = 31536000  # 1 year
     __birth_date = None
