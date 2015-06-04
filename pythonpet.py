@@ -1,4 +1,8 @@
 __author__ = 'Luke Merrett'
 
+from pet import Pet
+
 if __name__ == '__main__':
-	print ('Program starting')
+    print('Creating your pet')
+
+    myPet = Pet()
