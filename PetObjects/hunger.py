@@ -15,3 +15,4 @@ class HungerLevel:
 
     def feed_pet(self):
         self.__last_fed = datehelper.todays_date()
+        print("Your pet has been fed")
