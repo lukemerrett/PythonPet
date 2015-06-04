@@ -18,3 +18,5 @@ if __name__ == '__main__':
 
     if pets_status.is_hungry:
         print("Your pet is hungry, better feed them!")
+
+    myPet.HungerLevel.feed_pet()
