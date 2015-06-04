@@ -1,9 +1,12 @@
 __author__ = 'Luke Merrett'
 
 from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
 from random import randint
-from petstatus import PetStatus
+
+from dateutil.relativedelta import relativedelta
+
+from PetObjects.petstatus import PetStatus
+
 
 class Pet:
     __minimum_potential_lifespan_in_seconds = 86400  # 1 day

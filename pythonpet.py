@@ -1,6 +1,6 @@
 __author__ = 'Luke Merrett'
 
-from pet import Pet
+from PetObjects.pet import Pet
 
 if __name__ == '__main__':
     print('Creating your pet')
