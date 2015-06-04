@@ -12,4 +12,9 @@ if __name__ == '__main__':
 
     pets_status = myPet.get_pets_status()
 
-    print(pets_status.has_reached_its_lifespan)
+    if pets_status.has_reached_its_lifespan:
+        print("Your pet has died!")
+        exit()
+
+    if pets_status.is_hungry:
+        print("Your pet is hungry, better feed them!")

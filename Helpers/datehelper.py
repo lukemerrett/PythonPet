@@ -16,4 +16,4 @@ def get_total_seconds_difference(latest_date, earliest_date):
     return (latest_date - earliest_date).total_seconds()
 
 def todays_date():
-        return datetime.now()
+    return datetime.now()
