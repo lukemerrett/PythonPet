@@ -2,12 +2,14 @@ __author__ = 'Luke Merrett'
 
 from PetObjects.status import PetStatus
 from PetObjects.age import Age
+from PetObjects.bladder import Bladder
 from PetObjects.hunger import HungerLevel
 
 class Pet:
     Age = None
     HungerLevel = None
     Name = None
+    Bladder = None
 
     def __init__(self):
         pass
@@ -17,7 +19,8 @@ class Pet:
         Sets the original details for the pet
         """
         self.Age = Age()
-        self.HungerLevel = HungerLevel()
+        self.Bladder = Bladder()
+        self.HungerLevel = HungerLevel(self.Bladder)
         self.Name = name
 
     def get_pets_status(self):
@@ -28,4 +31,5 @@ class Pet:
         return PetStatus(
             self.Age.has_pet_reached_its_lifespan(),
             self.HungerLevel.is_hungry(),
+            self.Bladder.needs_the_toilet(),
             self.Name)

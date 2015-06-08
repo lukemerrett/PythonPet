@@ -26,13 +26,15 @@ def console_loop():
     print('----------\n')
     print(myPet.Age.current_age_string())
     print('Hungry: ' + ('Yes! Feed Me!' if pets_status.is_hungry else 'Not yet'))
+    print('Needs the Toilet: ' + ('Bursting!' if pets_status.needs_the_toilet else 'Nope'))
     print('')
     print('What would you like to do:\n')
     print('1. Feed Pet')
-    print('2. Wait')
-    print('3. Exit')
+    print('2. Go to Toilet')
+    print('3. Wait')
+    print('4. Exit')
 
-    number_chosen = input('Choose a number (1,2,3): ')
+    number_chosen = input('Choose a number (1,2,3,4): ')
 
     run_option(number_chosen)
 
@@ -47,8 +49,9 @@ if __name__ == '__main__':
 
     console_options = {
         '1': myPet.HungerLevel.feed_pet,
-        '2': wait,
-        '3': exit
+        '2': myPet.Bladder.go_to_toilet,
+        '3': wait,
+        '4': exit
     }
 
     print('Your pet has hatched; welcome it to the new world!')
