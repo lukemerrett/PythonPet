@@ -14,12 +14,12 @@ class Pet:
     def __init__(self):
         pass
 
-    def hatch(self, name):
+    def hatch(self, environment, name):
         """
         Sets the original details for the pet
         """
         self.Age = Age()
-        self.Bladder = Bladder()
+        self.Bladder = Bladder(environment)
         self.HungerLevel = HungerLevel(self.Bladder)
         self.Name = name
 
