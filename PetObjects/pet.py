@@ -7,16 +7,18 @@ from PetObjects.hunger import HungerLevel
 class Pet:
     Age = None
     HungerLevel = None
+    Name = None
 
     def __init__(self):
         pass
 
-    def hatch(self):
+    def hatch(self, name):
         """
-        Sets the birth date and total potential age of the pet
+        Sets the original details for the pet
         """
         self.Age = Age()
         self.HungerLevel = HungerLevel()
+        self.Name = name
 
     def get_pets_status(self):
         """
@@ -25,4 +27,5 @@ class Pet:
         """
         return PetStatus(
             self.Age.has_pet_reached_its_lifespan(),
-            self.HungerLevel.is_hungry())
+            self.HungerLevel.is_hungry(),
+            self.Name)

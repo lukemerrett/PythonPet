@@ -6,7 +6,11 @@ myPet = None
 console_options = None
 
 def run_option(x):
-    console_options[x]()
+    if x in console_options:
+        console_options[x]()
+    else:
+        print("You didn\'t enter an option")
+        wait()
 
 def wait():
     print("Waiting")
@@ -18,7 +22,7 @@ def console_loop():
         print('Your pet has died!')
         exit()
 
-    print('\nPet status')
+    print('\n%s\'s status' % myPet.Name)
     print('----------\n')
     print(myPet.Age.current_age_string())
     print('Hungry: ' + ('Yes! Feed Me!' if pets_status.is_hungry else 'Not yet'))
@@ -34,10 +38,12 @@ def console_loop():
 
 # Entry Point
 if __name__ == '__main__':
-    print('Creating your pet')
-
     myPet = Pet()
-    myPet.hatch()
+
+    print('What would you like to call your pet? ')
+    pets_name = input('Name: ')
+
+    myPet.hatch(pets_name)
 
     console_options = {
         '1': myPet.HungerLevel.feed_pet,
